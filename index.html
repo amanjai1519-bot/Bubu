@@ -24,7 +24,7 @@
     </div>
 
     <!-- Main Container Card -->
-    <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-2xl max-w-md w-full text-center border border-pink-200 z-10 relative transform hover:scale-[1.01] transition-transform duration-300">
+    <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-2xl max-w-2xl w-full text-center border border-pink-200 z-10 relative transform hover:scale-[1.01] transition-transform duration-300">
         
         <!-- ================= SCREEN 1: INITIAL SCREEN ================= -->
         <div id="screen1" class="screen-transition opacity-100 scale-100 flex flex-col items-center justify-center gap-8">
@@ -32,19 +32,24 @@
                 Hey baebu ✨
             </h1>
             <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                <button onclick="handleChoice('love')" class="cursor-pointer bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all text-lg flex-1">
+                <button onclick="handleChoice('love')" class="cursor-pointer bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300">
                     u love me
                 </button>
-                <button onclick="handleChoice('more')" class="cursor-pointer bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all text-lg flex-1">
+                <button onclick="handleChoice('more')" class="cursor-pointer bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300">
                     u love me more
                 </button>
             </div>
         </div>
 
-        <!-- ================= SCREEN 2A: PENGUIN CHOICE ================= -->
+        <!-- ================= SCREEN 2A: COUPLE PHOTOS ================= -->
         <div id="screen2-love" class="screen-transition opacity-0 scale-95 hidden flex flex-col items-center justify-center gap-6">
-            <div class="w-48 h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
-                <img src="./images/penguin.gif" alt="Cute Penguin" class="w-full h-full object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <div class="w-full h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
+                    <img src="./couple-photo.jpg" alt="Us Together 1" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
+                    <img src="./couple-photo.jpg" alt="Us Together 2" class="w-full h-full object-cover">
+                </div>
             </div>
             <p class="text-xl font-medium text-rose-700 leading-relaxed max-w-sm px-2">
                 wifey you are my safest place in this universe will u be my penguin🙈
@@ -53,8 +58,13 @@
 
         <!-- ================= SCREEN 2B: COUPLE CHOICE ================= -->
         <div id="screen2-more" class="screen-transition opacity-0 scale-95 hidden flex flex-col items-center justify-center gap-6">
-            <div class="w-48 h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
-                <img src="./images/couple.jpg" alt="Us Together" class="w-full h-full object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <div class="w-full h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
+                    <img src="./couple-photo.jpg" alt="Us Together 1" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
+                    <img src="./couple-photo.jpg" alt="Us Together 2" class="w-full h-full object-cover">
+                </div>
             </div>
             <p class="text-xl font-medium text-purple-700 leading-relaxed italic max-w-sm px-2">
                 intezar karenge hum tera chahe zamane lag jae zamane lag jae yaa tu aa jae yaa hum thikane lag jae💌
