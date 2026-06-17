@@ -32,10 +32,10 @@
                 Hey baebu ✨
             </h1>
             <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                <button onclick="handleChoice('love')" class="cursor-pointer bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all text-lg flex-1">
+                <button onclick="handleChoice('love')" class="cursor-pointer bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-200 transform hover:scale-105 active:scale-95">
                     u love me
                 </button>
-                <button onclick="handleChoice('more')" class="cursor-pointer bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all text-lg flex-1">
+                <button onclick="handleChoice('more')" class="cursor-pointer bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-200 transform hover:scale-105 active:scale-95">
                     u love me more
                 </button>
             </div>
@@ -54,7 +54,7 @@
         <!-- ================= SCREEN 2B: COUPLE CHOICE ================= -->
         <div id="screen2-more" class="screen-transition opacity-0 scale-95 hidden flex flex-col items-center justify-center gap-6">
             <div class="w-48 h-48 bg-pink-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-pink-100">
-                <img src="https://media.tenor.com/Q36OyMGi69sAAAAd/love-couple.gif" alt="Couple Hugging" class="w-full h-full object-cover">
+                <img src="couple-photo.jpg" alt="Us Together" class="w-full h-full object-cover">
             </div>
             <p class="text-xl font-medium text-purple-700 leading-relaxed italic max-w-sm px-2">
                 intezar karenge hum tera chahe zamane lag jae zamane lag jae yaa tu aa jae yaa hum thikane lag jae💌
@@ -75,6 +75,8 @@
 
     <!-- JavaScript Logic -->
     <script>
+        const ANIMATION_DURATION = 800; // ms
+        const SCREEN_DELAY = 10000; // ms
         let currentScreenId = 'screen1';
 
         function changeScreen(fromId, toId) {
@@ -98,7 +100,7 @@
                 toScreen.classList.remove('opacity-0', 'scale-95');
                 toScreen.classList.add('opacity-100', 'scale-100');
                 currentScreenId = toId;
-            }, 800);
+            }, ANIMATION_DURATION);
         }
 
         function handleChoice(choice) {
@@ -110,7 +112,7 @@
             // Trigger the absolute final screen exactly 10 seconds later
             setTimeout(() => {
                 changeScreen(nextScreenId, 'screen3');
-            }, 10000);
+            }, SCREEN_DELAY);
         }
     </script>
 </body>
